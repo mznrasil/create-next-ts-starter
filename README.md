@@ -23,7 +23,7 @@ This starter template provides a robust foundation for building modern React app
 - Next.js 14: [Docs](https://nextjs.org/docs)
 - TypeScript: A typed superset of Javascript
 - Tailwind CSS: A utility first CSS framework. [Docs](https://tailwindcss.com/)
-- Shadcn-ui: Accessible and customizable React components. [Docs](https://ui.shadcn.com/)
+- Shadcn-ui: Accessible and customizable React components based on TailwindCSS and RadixUI. [Docs](https://ui.shadcn.com/)
 - framer-motion: Animation library for React. [Docs](https://www.framer.com/motion/)
 - ESLint: Javascript and Typescript linter.
 - Prettier: Code formatter.
