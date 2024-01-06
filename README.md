@@ -1,36 +1,61 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# @mznrasil/create-next-ts-starter
+
+A starter template for building modern React applications with Next.js, TypeScript, Tailwind CSS, shadcn-ui, framer-motion, ESLint, Prettier, and Commitizen.
+
+## Prerequisites
+
+Make sure you have Node.js version 18.17 or higher installed.
+
 ## Getting Started
 
-First, run the development server:
+To create a new project using this starter template, run the following command:
 
 ```bash
+npx @mznrasil/create-next-ts-starter {your_repo_name}
+```
+
+# Features
+
+This starter template provides a robust foundation for building modern React applications with a focus on developer experience and best practices. Here are some key features:
+
+- Next.js 14: [Docs](https://nextjs.org/docs)
+- TypeScript: A typed superset of Javascript
+- Tailwind CSS: A utility first CSS framework. [Docs](https://tailwindcss.com/)
+- Shadcn-ui: Accessible and customizable React components. [Docs](https://ui.shadcn.com/)
+- framer-motion: Animation library for React. [Docs](https://www.framer.com/motion/)
+- ESLint: Javascript and Typescript linter.
+- Prettier: Code formatter.
+- Commitizen: Standardized commit messages.
+
+## Usage
+
+Explore the provided npm scripts to seamlessly run development servers, build your application, and adhere to linting and formatting standards.
+
+```bash
+# Development Server
 npm run dev
 # or
 yarn dev
+
+# Production Server
+npm start
 # or
-pnpm dev
+yarn start
+
+# Build
+npm run build
 # or
-bun dev
+yarn build
+
+# Linting
+npm run lint
+# or
+yarn lint
+
+# Commit
+npm run commit
+# or
+yarn commit
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

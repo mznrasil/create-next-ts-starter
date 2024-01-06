@@ -1,7 +1,8 @@
 {
-  "name": "@mznrasil/nextjs-boilerplate",
-  "version": "0.1.0",
-  "private": false,
+  "name": "@mznrasil/create-next-ts-starter",
+  "version": "1.1.0",
+  "description": "A Next.js boilerplate with Tailwind CSS, TypeScript, Prettier, Eslint, Husky, Commitizen, and more.",
+  "bin": "./bin/cli.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
