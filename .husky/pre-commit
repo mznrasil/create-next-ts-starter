@@ -1,17 +1,45 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
- 
-echo '🏗️👷 Styling your project before committing👷‍♂️🏗️'
-echo 'Please be patient, this may take a while...'
- 
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+no_color='\033[0m'
+
+echo ""
+echo "Executing pre-commit hook... 🔄"
+echo "Please be patient, this may take a while... ⏳"
+echo ""
+
+if [ "$OSTYPE" == "msys" ]; then
+	exec >/dev/console 2>&1
+fi
+consoleregexp='console\.[clear|dir|log|info|warn|table|error|group|groupEnd]'
+# CHECK
+if test $(git diff --cached | grep $consoleregexp | wc -l) != 0; then
+	exec git diff --cached | grep -ne $consoleregexp
+	echo ""
+	echo "Commit Rejected ❌"
+	echo "Remove all console. references before committing"
+	echo ""
+	exit 1
+fi
+
 # Check ESLint Standards
-yarn lint ||
-(
-    echo '🔨❌ You have a problem in your code. Check linter 🔨❌
-          Run yarn lint, add changes and try commit again.';
-    false;
-)
- 
-echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'
- 
-npx lint-staged
+npx lint-staged ||
+	(
+		echo "You have a problem in your code. Check linter ❌
+          Run yarn lint, add changes and try commit again."
+		false
+	)
+
+echo ""
+echo "No console. references found! ✔️"
+echo "Git pre-commit hook was successful! ✔️"
+
+echo "No error found! ✔️"
+echo ""
+
+# Build the React app
+echo "Building the app... ⏳"
+yarn build
+echo "Successfully built the app ✔️"
